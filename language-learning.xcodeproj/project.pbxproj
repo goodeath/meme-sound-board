@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		C2BB2F8F2F25C7ED005BCDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2BB2F722F25C7EC005BCDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2BB2F792F25C7EC005BCDCB;
+			remoteInfo = "language-learning";
+		};
+		C2BB2F992F25C7ED005BCDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2BB2F722F25C7EC005BCDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2BB2F792F25C7EC005BCDCB;
+			remoteInfo = "language-learning";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2BB2F7A2F25C7EC005BCDCB /* language-learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "language-learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BB2F8E2F25C7ED005BCDCB /* language-learningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "language-learningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BB2F982F25C7ED005BCDCB /* language-learningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "language-learningUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C2BB2F7C2F25C7EC005BCDCB /* language-learning */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "language-learning";
+			sourceTree = "<group>";
+		};
+		C2BB2F912F25C7ED005BCDCB /* language-learningTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "language-learningTests";
+			sourceTree = "<group>";
+		};
+		C2BB2F9B2F25C7ED005BCDCB /* language-learningUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "language-learningUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2BB2F772F25C7EC005BCDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BB2F8B2F25C7ED005BCDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BB2F952F25C7ED005BCDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2BB2F712F25C7EC005BCDCB = {
+			isa = PBXGroup;
+			children = (
+				C2BB2F7C2F25C7EC005BCDCB /* language-learning */,
+				C2BB2F912F25C7ED005BCDCB /* language-learningTests */,
+				C2BB2F9B2F25C7ED005BCDCB /* language-learningUITests */,
+				C2BB2F7B2F25C7EC005BCDCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2BB2F7B2F25C7EC005BCDCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2BB2F7A2F25C7EC005BCDCB /* language-learning.app */,
+				C2BB2F8E2F25C7ED005BCDCB /* language-learningTests.xctest */,
+				C2BB2F982F25C7ED005BCDCB /* language-learningUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2BB2F792F25C7EC005BCDCB /* language-learning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BB2FA22F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learning" */;
+			buildPhases = (
+				C2BB2F762F25C7EC005BCDCB /* Sources */,
+				C2BB2F772F25C7EC005BCDCB /* Frameworks */,
+				C2BB2F782F25C7EC005BCDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C2BB2F7C2F25C7EC005BCDCB /* language-learning */,
+			);
+			name = "language-learning";
+			packageProductDependencies = (
+			);
+			productName = "language-learning";
+			productReference = C2BB2F7A2F25C7EC005BCDCB /* language-learning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2BB2F8D2F25C7ED005BCDCB /* language-learningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BB2FA52F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningTests" */;
+			buildPhases = (
+				C2BB2F8A2F25C7ED005BCDCB /* Sources */,
+				C2BB2F8B2F25C7ED005BCDCB /* Frameworks */,
+				C2BB2F8C2F25C7ED005BCDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2BB2F902F25C7ED005BCDCB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C2BB2F912F25C7ED005BCDCB /* language-learningTests */,
+			);
+			name = "language-learningTests";
+			packageProductDependencies = (
+			);
+			productName = "language-learningTests";
+			productReference = C2BB2F8E2F25C7ED005BCDCB /* language-learningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2BB2F972F25C7ED005BCDCB /* language-learningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BB2FA82F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningUITests" */;
+			buildPhases = (
+				C2BB2F942F25C7ED005BCDCB /* Sources */,
+				C2BB2F952F25C7ED005BCDCB /* Frameworks */,
+				C2BB2F962F25C7ED005BCDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2BB2F9A2F25C7ED005BCDCB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C2BB2F9B2F25C7ED005BCDCB /* language-learningUITests */,
+			);
+			name = "language-learningUITests";
+			packageProductDependencies = (
+			);
+			productName = "language-learningUITests";
+			productReference = C2BB2F982F25C7ED005BCDCB /* language-learningUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2BB2F722F25C7EC005BCDCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					C2BB2F792F25C7EC005BCDCB = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C2BB2F8D2F25C7ED005BCDCB = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = C2BB2F792F25C7EC005BCDCB;
+					};
+					C2BB2F972F25C7ED005BCDCB = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = C2BB2F792F25C7EC005BCDCB;
+					};
+				};
+			};
+			buildConfigurationList = C2BB2F752F25C7EC005BCDCB /* Build configuration list for PBXProject "language-learning" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2BB2F712F25C7EC005BCDCB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C2BB2F7B2F25C7EC005BCDCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2BB2F792F25C7EC005BCDCB /* language-learning */,
+				C2BB2F8D2F25C7ED005BCDCB /* language-learningTests */,
+				C2BB2F972F25C7ED005BCDCB /* language-learningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2BB2F782F25C7EC005BCDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BB2F8C2F25C7ED005BCDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BB2F962F25C7ED005BCDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2BB2F762F25C7EC005BCDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BB2F8A2F25C7ED005BCDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BB2F942F25C7ED005BCDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2BB2F902F25C7ED005BCDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2BB2F792F25C7EC005BCDCB /* language-learning */;
+			targetProxy = C2BB2F8F2F25C7ED005BCDCB /* PBXContainerItemProxy */;
+		};
+		C2BB2F9A2F25C7ED005BCDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2BB2F792F25C7EC005BCDCB /* language-learning */;
+			targetProxy = C2BB2F992F25C7ED005BCDCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2BB2FA02F25C7ED005BCDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C2BB2FA12F25C7ED005BCDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C2BB2FA32F25C7ED005BCDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikkon.language-learning";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		C2BB2FA42F25C7ED005BCDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikkon.language-learning";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		C2BB2FA62F25C7ED005BCDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikkon.language-learningTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/language-learning.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/language-learning";
+			};
+			name = Debug;
+		};
+		C2BB2FA72F25C7ED005BCDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikkon.language-learningTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/language-learning.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/language-learning";
+			};
+			name = Release;
+		};
+		C2BB2FA92F25C7ED005BCDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikkon.language-learningUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = "language-learning";
+			};
+			name = Debug;
+		};
+		C2BB2FAA2F25C7ED005BCDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reikkon.language-learningUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = "language-learning";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2BB2F752F25C7EC005BCDCB /* Build configuration list for PBXProject "language-learning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BB2FA02F25C7ED005BCDCB /* Debug */,
+				C2BB2FA12F25C7ED005BCDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BB2FA22F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BB2FA32F25C7ED005BCDCB /* Debug */,
+				C2BB2FA42F25C7ED005BCDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BB2FA52F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BB2FA62F25C7ED005BCDCB /* Debug */,
+				C2BB2FA72F25C7ED005BCDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BB2FA82F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BB2FA92F25C7ED005BCDCB /* Debug */,
+				C2BB2FAA2F25C7ED005BCDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2BB2F722F25C7EC005BCDCB /* Project object */;
+}
