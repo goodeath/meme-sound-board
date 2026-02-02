@@ -24,15 +24,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C2BB2F7A2F25C7EC005BCDCB /* language-learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "language-learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2BB2F8E2F25C7ED005BCDCB /* language-learningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "language-learningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2BB2F982F25C7ED005BCDCB /* language-learningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "language-learningUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BB2F7A2F25C7EC005BCDCB /* memeboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BB2F8E2F25C7ED005BCDCB /* memeboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BB2F982F25C7ED005BCDCB /* memeboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		C2BB2FBB2F2EF9F6005BCDCB /* Exceptions for "memeboard" folder in "Compile Sources" phase from "memeboard" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = C2BB2F762F25C7EC005BCDCB /* Sources */;
+			membershipExceptions = (
+				filesystem/AudioSelector.h,
+				filesystem/FilePicker.h,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C2BB2F7C2F25C7EC005BCDCB /* language-learning */ = {
+		C2BB2F7C2F25C7EC005BCDCB /* memeboard */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "language-learning";
+			exceptions = (
+				C2BB2FBB2F2EF9F6005BCDCB /* Exceptions for "memeboard" folder in "Compile Sources" phase from "memeboard" target */,
+			);
+			explicitFileTypes = {
+				AppDelegate.h = sourcecode.c.h;
+			};
+			path = memeboard;
 			sourceTree = "<group>";
 		};
 		C2BB2F912F25C7ED005BCDCB /* language-learningTests */ = {
@@ -75,7 +92,7 @@
 		C2BB2F712F25C7EC005BCDCB = {
 			isa = PBXGroup;
 			children = (
-				C2BB2F7C2F25C7EC005BCDCB /* language-learning */,
+				C2BB2F7C2F25C7EC005BCDCB /* memeboard */,
 				C2BB2F912F25C7ED005BCDCB /* language-learningTests */,
 				C2BB2F9B2F25C7ED005BCDCB /* language-learningUITests */,
 				C2BB2F7B2F25C7EC005BCDCB /* Products */,
@@ -85,9 +102,9 @@
 		C2BB2F7B2F25C7EC005BCDCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2BB2F7A2F25C7EC005BCDCB /* language-learning.app */,
-				C2BB2F8E2F25C7ED005BCDCB /* language-learningTests.xctest */,
-				C2BB2F982F25C7ED005BCDCB /* language-learningUITests.xctest */,
+				C2BB2F7A2F25C7EC005BCDCB /* memeboard.app */,
+				C2BB2F8E2F25C7ED005BCDCB /* memeboardTests.xctest */,
+				C2BB2F982F25C7ED005BCDCB /* memeboardUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2BB2F792F25C7EC005BCDCB /* language-learning */ = {
+		C2BB2F792F25C7EC005BCDCB /* memeboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2BB2FA22F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learning" */;
+			buildConfigurationList = C2BB2FA22F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "memeboard" */;
 			buildPhases = (
 				C2BB2F762F25C7EC005BCDCB /* Sources */,
 				C2BB2F772F25C7EC005BCDCB /* Frameworks */,
@@ -108,18 +125,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C2BB2F7C2F25C7EC005BCDCB /* language-learning */,
+				C2BB2F7C2F25C7EC005BCDCB /* memeboard */,
 			);
-			name = "language-learning";
+			name = memeboard;
 			packageProductDependencies = (
 			);
 			productName = "language-learning";
-			productReference = C2BB2F7A2F25C7EC005BCDCB /* language-learning.app */;
+			productReference = C2BB2F7A2F25C7EC005BCDCB /* memeboard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C2BB2F8D2F25C7ED005BCDCB /* language-learningTests */ = {
+		C2BB2F8D2F25C7ED005BCDCB /* memeboardTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2BB2FA52F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningTests" */;
+			buildConfigurationList = C2BB2FA52F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "memeboardTests" */;
 			buildPhases = (
 				C2BB2F8A2F25C7ED005BCDCB /* Sources */,
 				C2BB2F8B2F25C7ED005BCDCB /* Frameworks */,
@@ -133,16 +150,16 @@
 			fileSystemSynchronizedGroups = (
 				C2BB2F912F25C7ED005BCDCB /* language-learningTests */,
 			);
-			name = "language-learningTests";
+			name = memeboardTests;
 			packageProductDependencies = (
 			);
 			productName = "language-learningTests";
-			productReference = C2BB2F8E2F25C7ED005BCDCB /* language-learningTests.xctest */;
+			productReference = C2BB2F8E2F25C7ED005BCDCB /* memeboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C2BB2F972F25C7ED005BCDCB /* language-learningUITests */ = {
+		C2BB2F972F25C7ED005BCDCB /* memeboardUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2BB2FA82F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningUITests" */;
+			buildConfigurationList = C2BB2FA82F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "memeboardUITests" */;
 			buildPhases = (
 				C2BB2F942F25C7ED005BCDCB /* Sources */,
 				C2BB2F952F25C7ED005BCDCB /* Frameworks */,
@@ -156,11 +173,11 @@
 			fileSystemSynchronizedGroups = (
 				C2BB2F9B2F25C7ED005BCDCB /* language-learningUITests */,
 			);
-			name = "language-learningUITests";
+			name = memeboardUITests;
 			packageProductDependencies = (
 			);
 			productName = "language-learningUITests";
-			productReference = C2BB2F982F25C7ED005BCDCB /* language-learningUITests.xctest */;
+			productReference = C2BB2F982F25C7ED005BCDCB /* memeboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -174,6 +191,7 @@
 				TargetAttributes = {
 					C2BB2F792F25C7EC005BCDCB = {
 						CreatedOnToolsVersion = 26.2;
+						LastSwiftMigration = 2620;
 					};
 					C2BB2F8D2F25C7ED005BCDCB = {
 						CreatedOnToolsVersion = 26.2;
@@ -185,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C2BB2F752F25C7EC005BCDCB /* Build configuration list for PBXProject "language-learning" */;
+			buildConfigurationList = C2BB2F752F25C7EC005BCDCB /* Build configuration list for PBXProject "memeboard" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -199,9 +217,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2BB2F792F25C7EC005BCDCB /* language-learning */,
-				C2BB2F8D2F25C7ED005BCDCB /* language-learningTests */,
-				C2BB2F972F25C7ED005BCDCB /* language-learningUITests */,
+				C2BB2F792F25C7EC005BCDCB /* memeboard */,
+				C2BB2F8D2F25C7ED005BCDCB /* memeboardTests */,
+				C2BB2F972F25C7ED005BCDCB /* memeboardUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,12 +275,12 @@
 /* Begin PBXTargetDependency section */
 		C2BB2F902F25C7ED005BCDCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C2BB2F792F25C7EC005BCDCB /* language-learning */;
+			target = C2BB2F792F25C7EC005BCDCB /* memeboard */;
 			targetProxy = C2BB2F8F2F25C7ED005BCDCB /* PBXContainerItemProxy */;
 		};
 		C2BB2F9A2F25C7ED005BCDCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C2BB2F792F25C7EC005BCDCB /* language-learning */;
+			target = C2BB2F792F25C7EC005BCDCB /* memeboard */;
 			targetProxy = C2BB2F992F25C7ED005BCDCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -388,6 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -407,6 +426,8 @@
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -415,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -434,6 +456,7 @@
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -450,7 +473,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/language-learning.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/language-learning";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/memeboard";
 			};
 			name = Debug;
 		};
@@ -467,7 +490,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/language-learning.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/language-learning";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/memeboard";
 			};
 			name = Release;
 		};
@@ -504,7 +527,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2BB2F752F25C7EC005BCDCB /* Build configuration list for PBXProject "language-learning" */ = {
+		C2BB2F752F25C7EC005BCDCB /* Build configuration list for PBXProject "memeboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2BB2FA02F25C7ED005BCDCB /* Debug */,
@@ -513,7 +536,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2BB2FA22F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learning" */ = {
+		C2BB2FA22F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "memeboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2BB2FA32F25C7ED005BCDCB /* Debug */,
@@ -522,7 +545,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2BB2FA52F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningTests" */ = {
+		C2BB2FA52F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "memeboardTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2BB2FA62F25C7ED005BCDCB /* Debug */,
@@ -531,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2BB2FA82F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "language-learningUITests" */ = {
+		C2BB2FA82F25C7ED005BCDCB /* Build configuration list for PBXNativeTarget "memeboardUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2BB2FA92F25C7ED005BCDCB /* Debug */,

@@ -6,18 +6,135 @@
 //
 
 #import "AppDelegate.h"
+#import "filesystem/AudioSelector.h"
+#import "filesystem/FilePicker.h"
+#import "core/ui/components/meme-button/MemeButton.h"
+
+
 
 @interface AppDelegate ()
-
-@property (strong) IBOutlet NSWindow *window;
 - (void)save;
+
 
 @end
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+@synthesize userName;
+@synthesize imageView;
+
++ (void)load {
+    NSLog(@"AppDelegate +load");
+}
+/**
+ * add shortcutss
+ * store configuration
+ * copy files
+ * dynamic buttons
+ * correct trigger
+ * remove buttons
+ * assign custom shortcuts
+ * plugin for searching and downloading from internet
+ * backup/import
+ * max file 500kb
+ */
+//
+//- (void)addMemeButton
+//{
+//    NSImageView *view = [[NSImageView alloc] initWithFrame: CGRectMake(50, 100, 100, 100)];
+//    view.image = [NSImage imageNamed:@"button.png"];
+//    [self.viewc]
+//    [[self window] view
+//}
+
+- (void)imageClicked:(NSClickGestureRecognizer *)recognizer {
+ 
+    [AudioSelector pick: ^(NSURL *url){
+        if(url == nil) return;
+        
+        NSString *urlStr = url.absoluteString;
+        NSArray<NSString *> *parts = [urlStr componentsSeparatedByString:@"/"];
+        NSString *name = parts.lastObject;
+        Sound *sound = [[Sound alloc] init:name filepath: url];
+        if(self.sounds == nil) self.sounds = [NSArray<Sound *> arrayWithObject:sound];
+        else [self.sounds arrayByAddingObject:sound];
+//        [sound play];
+        NSLog(@"%@", url);
+        
+        self.memeBoard = [[MemeBoardView alloc] init];
+        NSWindow *mainWindow = self.window;
+        NSLog(@"%@", mainWindow);
+        if(self.memeBoard && mainWindow){
+//            [self.memeBoard view];
+            NSLog(@"ADDING IMG");
+            [mainWindow.contentView addSubview:self.memeBoard.view];
+        }
+    }];
+}
+
+/**
+ * Add Meme Handler
+ *
+ * gets the meme audio file and inserts in the system
+ */
+- (void)addMemeHandler:(NSClickGestureRecognizer *) recognizer
+{
+    [FilePicker pick: ^(NSURL *url) {
+        NSLog(@"%@ %@", url, self.window);
+        if(url == nil || self.window == nil) return;
+        
+//        NSString *urlStr = url.absoluteString;
+//        NSArray<NSString *> *parts = [urlStr componentsSeparatedByString:@"/"];
+//        NSString *name = parts.lastObject;
+//        
+//        Sound *sound = [[Sound alloc] init:name filepath: url];
+//        
+//        if(self.sounds == nil) self.sounds = [NSArray<Sound *> arrayWithObject:sound];
+//        else [self.sounds arrayByAddingObject:sound];
+//        
+//        MemeButton *btn = [
+//            [MemeButton alloc] initWithFrame: NSMakeRect(0, 0, 100, 100) mouseDownHandler:^(){
+//            NSLog(@"Playing");
+//            [sound play];
+//        }];
+        BOOL result = [self.memeManager addMeme:url];
+        if(result){
+            NSView *view = [self.memeManager getViewByURL:url];
+            [self.window.contentView addSubview: view];
+        }
+    }];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    self.memeManager = [[MemeManager alloc] init];
+//    NSAlert *alert = [[NSAlert alloc] init];
+//        alert.messageText = @"AppDelegate is alive";
+//        [alert runModal];
     // Insert code here to initialize your application
+    self.userName = NSFullUserName();
+    NSLog(@"Image clicked!");
+//    self.imageView.userInteractionEnabled = YES;
+//
+    NSClickGestureRecognizer *click =
+        [[NSClickGestureRecognizer alloc] initWithTarget:self
+                                                  action:@selector(addMemeHandler:)];
+
+    [self.addMemeBtn addGestureRecognizer:click];
+//
+//    
+    self.memeBoard = [[MemeBoardView alloc] init];
+////    NSWindow *mainWindow = [NSApp mainWindow];
+//    NSWindow *mainWindow =  self.window;
+//    NSLog(@"%@ asd",self.window);
+//    if(self.memeBoard && mainWindow){
+//        [self.memeBoard view];
+//        NSLog(@"ADDING IMG");
+////        [mainWindow setContentViewController:self.memeBoard];
+//        [[mainWindow contentView] addSubview: self.memeBoard.view];
+//        NSLog(@"Window frame: %@", NSStringFromRect(mainWindow.frame));
+//        NSLog(@"Content view frame: %@", NSStringFromRect(mainWindow.contentView.frame));
+//    }
+   
 }
 
 
