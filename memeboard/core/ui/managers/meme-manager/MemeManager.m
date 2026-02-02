@@ -13,6 +13,14 @@
     self.ui = btn;
     return self;
 }
+
+
+- (NSDictionary *)toDictionary {
+    return @{
+        @"url": self.sound.path.absoluteString
+    };
+}
+
 @end
 
 @implementation MemeManager
@@ -21,7 +29,46 @@
 {
     self = [super init];
     self.memes = [[NSArray<Meme *> alloc] init];
+    [self restore];
     return self;
+}
+
+-(void)save
+{
+    NSArray *jsonData = [self.memes valueForKey:@"toDictionary"];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:nil];
+    
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSURL *url = [[fm URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] firstObject];
+    [fm createDirectoryAtPath:url.path withIntermediateDirectories:YES attributes:nil error:nil];
+    url = [url URLByAppendingPathComponent:@"config.json"];
+    
+    
+    NSError *error = nil;
+    
+    BOOL success = [data writeToFile:url.path options: NSDataWritingAtomic error:&error];
+    if (!success) {
+        NSLog(@"Write error: %@", error);
+    }
+    NSLog(@"SAVING %@",url);
+}
+
+-(void)restore
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    NSURL *url = [[fm URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] firstObject];
+    url = [url URLByAppendingPathComponent:@"config.json"];
+    BOOL exists = [fm fileExistsAtPath:url.path];
+    NSLog(@"%@ %b", url, exists);
+    if(!exists) return;
+    NSData *data = [NSData dataWithContentsOfFile:url.absoluteString];
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+  
+    for(NSDictionary *dict in array){
+        NSString *url = [dict valueForKey:@"url"];
+        [self addMeme: [NSURL URLWithString:url]];
+    }
 }
 
 -(BOOL)addMeme:(NSURL *) url

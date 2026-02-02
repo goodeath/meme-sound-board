@@ -9,9 +9,13 @@
 #import "../../../models/sound/Sound.h"
 
 @interface Meme: NSObject
--(id)init:(MemeButton *) btn sound:(Sound *) sound;
+
 @property Sound *sound;
 @property MemeButton *ui;
+
+-(id)init:(MemeButton *) btn sound:(Sound *) sound;
+-(NSDictionary *)toDictionary;
+
 @end
 
 @interface MemeManager: NSObject
@@ -20,5 +24,7 @@
 
 -(BOOL) addMeme:(NSURL *) url;
 -(NSView *) getViewByURL:(NSURL *) url;
+-(void)save;
+-(void)restore;
 
 @end

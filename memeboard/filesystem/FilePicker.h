@@ -10,4 +10,5 @@ typedef void (^FilePickerCallback)(NSURL *fileURL);
 
 @interface FilePicker: NSObject
 + (void) pick: (FilePickerCallback) completion;
++ (void) pickAndCopy: (FilePickerCallback) completion;
 @end

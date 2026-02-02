@@ -27,10 +27,10 @@
     NSLog(@"AppDelegate +load");
 }
 /**
- * add shortcutss
- * store configuration
- * copy files
- * dynamic buttons
+ * store configuration[x]
+ * copy files [x]
+ * dynamic buttons [x]
+ * Grid organization
  * correct trigger
  * remove buttons
  * assign custom shortcuts
@@ -79,7 +79,7 @@
  */
 - (void)addMemeHandler:(NSClickGestureRecognizer *) recognizer
 {
-    [FilePicker pick: ^(NSURL *url) {
+    [FilePicker pickAndCopy: ^(NSURL *url) {
         NSLog(@"%@ %@", url, self.window);
         if(url == nil || self.window == nil) return;
         
@@ -101,6 +101,7 @@
         if(result){
             NSView *view = [self.memeManager getViewByURL:url];
             [self.window.contentView addSubview: view];
+            [self.memeManager save];
         }
     }];
 }
@@ -134,7 +135,10 @@
 //        NSLog(@"Window frame: %@", NSStringFromRect(mainWindow.frame));
 //        NSLog(@"Content view frame: %@", NSStringFromRect(mainWindow.contentView.frame));
 //    }
-   
+    [self.memeManager restore];
+    for(Meme *meme in self.memeManager.memes){
+        [self.window.contentView addSubview: meme.ui];
+    }
 }
 
 
