@@ -18,6 +18,21 @@
 
 @end
 
+@interface PassthroughView : NSView
+@end
+
+@implementation PassthroughView
+- (NSView *)hitTest:(NSPoint)point {
+    for (NSView *subview in self.subviews) {
+        NSPoint p = [subview convertPoint:point fromView:self];
+        NSView *hit = [subview hitTest:p];
+        if (hit) return hit;
+    }
+    return nil;
+}
+@end
+
+
 @implementation AppDelegate
 
 @synthesize userName;
@@ -99,15 +114,104 @@
 //        }];
         BOOL result = [self.memeManager addMeme:url];
         if(result){
-            NSView *view = [self.memeManager getViewByURL:url];
-            [self.window.contentView addSubview: view];
+            Meme *view = [self.memeManager getViewByURL:url];
+            
+            NSView *cell = [[NSView alloc] initWithFrame:NSZeroRect];
+            cell.translatesAutoresizingMaskIntoConstraints = NO;
+
+
+            [view.ui removeFromSuperview];
+            [cell addSubview:view.ui];
+
+            [view.ui.centerXAnchor constraintEqualToAnchor:cell.centerXAnchor].active = YES;
+            [view.ui.centerYAnchor constraintEqualToAnchor:cell.centerYAnchor].active = YES;
+            [self.grid addColumnWithViews:@[cell]];
+//            
+//            [view.ui setOnRemove:^(NSView *v){
+//                NSGridCell *insertedCell = [self.grid cellForView:cell];
+//                if(insertedCell != nil){
+//                    NSGridColumn *r = insertedCell.column;
+//                    NSInteger index = [self.grid indexOfColumn:r];
+//                    [self.grid removeColumnAtIndex:index];
+//                    [self.memeManager remove:v];
+//                }
+//            }];
+            
+            [view.ui setOnRemove:^(NSView *v){
+                
+                NSGridCell *insertedCell = [self.grid cellForView:cell];
+                
+                if(insertedCell != nil){
+                    NSGridColumn *r = insertedCell.column;
+                
+                    NSInteger index = [self.grid indexOfColumn:r];
+                    NSLog(@"removing at %ld", index);
+                    [cell removeFromSuperview];
+                    [self.grid removeColumnAtIndex:index];
+                    [self.memeManager remove:v];
+                    [self.grid setNeedsLayout:YES];
+                    [self.grid layoutSubtreeIfNeeded];
+                    [self.grid setNeedsDisplay:YES];
+                }
+            }];
+      
+            
+            
+
+//            [self.window.contentView addSubview: view];
             [self.memeManager save];
         }
     }];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    //only work outside of container
+    PassthroughView *container = [[PassthroughView alloc] initWithFrame:NSZeroRect];
+    container.translatesAutoresizingMaskIntoConstraints = NO;
+    
     self.memeManager = [[MemeManager alloc] init];
+    self.grid = [[NSGridView alloc] init];
+    self.grid.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.grid addRowWithViews:@[]];
+    self.stack = [[NSStackView alloc] initWithFrame:NSZeroRect];
+    self.stack.wantsLayer = YES;
+    self.stack.layer.backgroundColor = NSColor.redColor.CGColor;
+
+    self.stack.orientation = NSUserInterfaceLayoutOrientationHorizontal;
+    self.grid.rowAlignment = NSGridRowAlignmentFirstBaseline;
+    self.stack.spacing = 50;
+    self.stack.translatesAutoresizingMaskIntoConstraints = NO;
+    self.stack.distribution = NSStackViewDistributionGravityAreas;
+    self.stack.alignment = NSLayoutAttributeCenterY;
+    [self.stack setHuggingPriority:NSLayoutPriorityRequired
+                  forOrientation:NSLayoutConstraintOrientationHorizontal];
+    [self.stack setContentCompressionResistancePriority:NSLayoutPriorityRequired
+                                          forOrientation:NSLayoutConstraintOrientationHorizontal];
+    [container addSubview:self.stack];
+    self.grid.columnSpacing = 50;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.stack.leadingAnchor constraintEqualToAnchor:container.leadingAnchor],
+        [self.stack.trailingAnchor constraintEqualToAnchor:container.trailingAnchor],
+        [self.stack.topAnchor constraintEqualToAnchor:container.topAnchor],
+        [self.stack.bottomAnchor constraintEqualToAnchor:container.bottomAnchor],
+    ]];
+//    [self.grid addRowWithViews:@[container]];
+
+//    [NSLayoutConstraint activateConstraints:@[
+//        [self.grid.leadingAnchor constraintEqualToAnchor:self.window.contentView.leadingAnchor constant:20],
+//        [self.grid.trailingAnchor constraintEqualToAnchor:self.window.contentView.trailingAnchor constant:-20],
+//        [self.grid.topAnchor constraintEqualToAnchor:self.window.contentView.topAnchor constant:20],
+//        [self.grid.bottomAnchor constraintEqualToAnchor:self.window.contentView.bottomAnchor constant:-20],
+//    ]];
+    
+    [self.window.contentView addSubview:self.grid];
+    [NSLayoutConstraint activateConstraints:@[
+        [self.grid.leadingAnchor constraintEqualToAnchor:self.window.contentView.leadingAnchor constant:20],
+        [self.grid.topAnchor constraintEqualToAnchor:self.window.contentView.topAnchor constant:150]
+    ]];
+
+
+   
 //    NSAlert *alert = [[NSAlert alloc] init];
 //        alert.messageText = @"AppDelegate is alive";
 //        [alert runModal];
@@ -137,8 +241,58 @@
 //    }
     [self.memeManager restore];
     for(Meme *meme in self.memeManager.memes){
-        [self.window.contentView addSubview: meme.ui];
+        NSLog(@"%@", meme.sound.path);
+//        MemeButton *button = meme.ui;
+//        Meme const *currentMeme = [[Meme alloc] init:meme.ui sound:meme.sound];
+        // IMPORTANT: disable autoresizing
+//        currentMeme.ui.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        // con
+        NSView *cell = [[NSView alloc] initWithFrame:NSZeroRect];
+        cell.translatesAutoresizingMaskIntoConstraints = NO;
+        cell.wantsLayer = YES;
+
+        [meme.ui removeFromSuperview];
+        [cell addSubview:meme.ui];
+
+        [meme.ui.centerXAnchor constraintEqualToAnchor:cell.centerXAnchor].active = YES;
+        [meme.ui.centerYAnchor constraintEqualToAnchor:cell.centerYAnchor].active = YES;
+        
+        // con
+
+//        // Size control (this replaces container tricks)
+//        [currentMeme.ui.widthAnchor constraintEqualToConstant:100].active = YES;
+//        [currentMeme.ui.heightAnchor constraintEqualToConstant:300].active = YES;
+//        
+        [self.grid addColumnWithViews:@[cell]];
+        
+
+        [meme.ui setOnRemove:^(NSView *v){
+            
+            NSGridCell *insertedCell = [self.grid cellForView:cell];
+            
+            if(insertedCell != nil){
+                NSGridColumn *r = insertedCell.column;
+            
+                NSInteger index = [self.grid indexOfColumn:r];
+                NSLog(@"removing at %ld", index);
+                [cell removeFromSuperview];
+                [self.grid removeColumnAtIndex:index];
+                [self.memeManager remove:v];
+                [self.grid setNeedsLayout:YES];
+                [self.grid layoutSubtreeIfNeeded];
+                [self.grid setNeedsDisplay:YES];
+            }
+        }];
+  
+//        return;
+//        [self.stack addArrangedSubview: meme.ui];
     }
+    self.stack.distribution = NSStackViewDistributionGravityAreas;
+    NSLog(@"dist=%ld spacing=%.1f",
+          self.stack.distribution,
+          self.stack.spacing);
+
 }
 
 

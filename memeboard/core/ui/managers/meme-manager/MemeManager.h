@@ -20,11 +20,14 @@
 
 @interface MemeManager: NSObject
 
-@property NSArray<Meme *> *memes;
+@property NSMutableArray<Meme *> *memes;
+
 
 -(BOOL) addMeme:(NSURL *) url;
--(NSView *) getViewByURL:(NSURL *) url;
+-(Meme *) getViewByURL:(NSURL *) url;
 -(void)save;
 -(void)restore;
+-(Meme *) remove:(NSView *)obj;
+
 
 @end

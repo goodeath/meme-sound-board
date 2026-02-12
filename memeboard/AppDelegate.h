@@ -21,7 +21,9 @@
 @property (strong) MemeBoardView *memeBoard;
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSButton *addMemeBtn;
-
+@property NSGridView *grid;
+@property NSStackView *stack;
+@property NSMutableDictionary<NSView *, NSNumber *> *viewToRow;
 //-(NSImageView *)addMemeButton;
 
 @end
